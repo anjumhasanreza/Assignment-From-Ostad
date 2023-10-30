@@ -1,6 +1,6 @@
 <?php
 require_once("../../header/header.php");
-require_once("../../config.php");
+require_once("../../functions.php");
 
 // Check if the user is logged in
 if (!isset($_SESSION['email']) || !isset($_SESSION['loggedin'])) {
@@ -27,7 +27,7 @@ try {
 
 <section style="background-color: #eee;">
     <div class="container py-5">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col">
                 <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
@@ -37,23 +37,23 @@ try {
                     </ol>
                 </nav>
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body text-center">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                        <img src="https://media.licdn.com/dms/image/C5603AQGwyJslzFUV-Q/profile-displayphoto-shrink_800_800/0/1590999423049?e=2147483647&v=beta&t=KWlI92BD-rS78XI-a4BoSI_sN12_GP_txr05gOtDpWA" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                         <h5 class="my-3"><?php echo $item['username']; ?></h5>
-                        <p class="text-muted mb-1">Full Stack Developer</p>
-                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                        <p class="text-muted mb-4"><?php echo ucwords($item['role']); ?></p>
+                        <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
                             <button type="button" class="btn btn-primary">Follow</button>
                             <button type="button" class="btn btn-outline-primary ms-1">Message</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="card mb-4 mb-lg-0">
+                <!-- <div class="card mb-4 mb-lg-0">
                     <div class="card-body p-0">
                         <ul class="list-group list-group-flush rounded-3">
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -78,10 +78,10 @@ try {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-lg-8">
-                <div class="card mb-4">
+                <div class="card mb-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
@@ -103,33 +103,33 @@ try {
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Phone</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">(097) 234-5678</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
                                 <p class="mb-0">Mobile</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">(098) 765-4321</p>
+                                <p class="text-muted mb-0">+88 01937 913457</p>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Address</p>
+                                <p class="mb-0">Gender</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                <p class="text-muted mb-0">Male</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Nationality</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">Bangladeshi</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <div class="card mb-4 mb-md-0">
                             <div class="card-body">
@@ -186,7 +186,7 @@ try {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

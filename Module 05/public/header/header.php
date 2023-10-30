@@ -7,9 +7,7 @@ session_start();
 define("BASE_URL", "http://localhost:3000/public");
 
 // Define the file path as a constant
-define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/database/db.txt");
-
-
+define("DB_FILE_PATH",  $_SERVER['DOCUMENT_ROOT'] . "/database/db.json");
 
 ?>
 
@@ -45,20 +43,53 @@ define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/databa
             }
         }
 
+        .parallaxss {
+            background-image: url("../img/banner.jpg");
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            min-height: 454px;
+            max-width: 100%;
+            /* margin-top: 5px; */
+            /* margin-left: 205px; */
+        }
+
+
+        /* .gradient-custom-2 { */
+        /* fallback for old browsers */
+        /* background: #fccb90; */
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        /* background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+        /* } */
+
         .gradient-custom-2 {
             /* fallback for old browsers */
             background: #fccb90;
 
             /* Chrome 10-25, Safari 5.1-6 */
-            background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+            background: -webkit-linear-gradient(to right, #3a5f0b, #de6c07);
 
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+            background: linear-gradient(to right, #3a5f0b, #de6c07);
         }
+        
+
+        .my-custom-element {
+            background-color: #87CEFA;
+        }
+
 
         @media (min-width: 768px) {
             .gradient-form {
-                height: 100vh !important;
+                height: 90vh !important;
             }
         }
 
@@ -87,11 +118,9 @@ define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/databa
 
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="<?php echo BASE_URL; ?>">
-                    <img src="<?php echo BASE_URL; ?>/img/ostad-app-logo-vector.png" alt="MDB Logo" loading="lazy" />
+                    <img src="<?php echo BASE_URL; ?>/img/RAMK a.png" style="height: 45px;" alt="MDB Logo" loading="lazy" />
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -102,6 +131,9 @@ define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/databa
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo BASE_URL; ?>/dashboard/index.php">Dashboard</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
                     <?php
                         endif;
                     endif;
@@ -109,13 +141,10 @@ define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/databa
 
                     <?php if (!isset($_SESSION['loggedin'])) : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo BASE_URL; ?>/login/index.php">Login</a>
+                            <a class="nav-link" href="<?php echo BASE_URL; ?>/login/index.php">Sign in</a>
                         </li>
-                    <?php endif; ?>
-
-                    <?php if (!isset($_SESSION['loggedin'])) : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo BASE_URL; ?>/registration/create.php">Register</a>
+                            <a class="nav-link" href="<?php echo BASE_URL; ?>/registration/create.php">Sign up</a>
                         </li>
                     <?php endif; ?>
 
@@ -130,7 +159,7 @@ define("DB_FILE_PATH", "C:/laragon/www/PHP/File Operations/CRUD_OPERATION/databa
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                            <img src="https://media.licdn.com/dms/image/C5603AQGwyJslzFUV-Q/profile-displayphoto-shrink_800_800/0/1590999423049?e=2147483647&v=beta&t=KWlI92BD-rS78XI-a4BoSI_sN12_GP_txr05gOtDpWA" class="rounded-circle" height="45" alt="Black and White Portrait of a Man" loading="lazy" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                             <li>

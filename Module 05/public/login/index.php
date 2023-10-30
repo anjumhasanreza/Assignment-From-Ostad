@@ -1,9 +1,9 @@
 <?php
 require_once("../header/header.php");
-require_once("../config.php");
+require_once("../functions.php");
 
 // Check if the user is already logged in, redirect if necessary
-if (isset($_SESSION['email'])) {
+if (isset($_SESSION['loggedin'])) {
     header('Location:' . BASE_URL);
     exit();
 }
@@ -18,10 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
             throw new Exception("Both email and password are required fields.");
         }
 
-        // Verify the email format
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new Exception('Invalid email format.');
-        }
+        validateEmail($email);
 
         // Read the user data from the database file
         $data = readDatabaseFile(DB_FILE_PATH);
@@ -38,10 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
 
                 if ($_SESSION['role'] == 'admin') {
                     header("Location:" . BASE_URL . "/dashboard/index.php");
-                } else if ($_SESSION['role'] == 'editor') {
-                    header("Location:" . BASE_URL);
+                } else if ($_SESSION['role'] == 'manager') {
+                    // header("Location:" . BASE_URL);
+                    header("Location:" . BASE_URL . "/dashboard/user/view.php?id=". $item["id"]);
                 } else {
-                    header("Location:" . BASE_URL);
+                    // header("Location:" . BASE_URL);
+                    header("Location:" . BASE_URL . "/dashboard/user/view.php?id=". $item["id"]);
                 }
                 exit();
             }
@@ -57,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
 ?>
 
 
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<!-- <section class="h-100 gradient-form" style="background-color: #000;"> -->
+<section class="h-100 gradient-form parallaxss">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -67,12 +67,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
                             <div class="card-body p-md-5 mx-md-4">
 
                                 <div class="text-center">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 185px;" alt="logo">
-                                    <h4 class="mt-1 mb-5 pb-1">We are the Laravel Team</h4>
+                                    <!-- <img src="E:/Ostad/Class/Assignment-From-Ostad/Module 05/public/img/welcome.webp" style="width: 185px;" alt="logo"> -->
+                                    <h4 class="mt-1 mb-5 pb-1">Wlcome to RAMK Soft Tech</h4>
                                 </div>
+
                                 <?php if (isset($_SESSION['success'])) :  ?>
                                     <div class="alert alert-success">
-                                        <?php echo $_SESSION['success']; ?>
+                                        <?php
+                                        echo $_SESSION['success'];
+                                        session_destroy();
+                                        ?>
                                     </div>
                                 <?php endif; ?>
                                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
@@ -82,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
                                     <?php endif; ?>
                                     <div class="form-outline mb-4">
                                         <input type="email" id="form2Example11" name="email" class="form-control" placeholder="Email address" />
-                                        <label class="form-label" for="form2Example11">Username</label>
+                                        <label class="form-label" for="form2Example11">Email Address</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
@@ -93,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="login">Log
                                             in</button>
-                                        <a class="text-muted" href="#!">Forgot password?</a>
+                                        <a class="text-muted" href="<?php echo BASE_URL; ?>/login/forgot-password.php">Forgot password?</a>
                                     </div>
 
                                     <div class="d-flex align-items-center justify-content-center pb-4">
@@ -107,8 +111,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["login"])) {
                         </div>
                         <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                             <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                <h4 class="mb-4">We are more than just a company</h4>
-                                <p class="medium mb-0 text-justify">The Laravel Team is the driving force behind Laravel, a renowned PHP framework. Committed to development, security, and community engagement, they ensure Laravel's excellence and ongoing evolution.</p>
+                                <h4 class="mb-4">User ID and Passwords are following <hr></h4>
+                                <p class="medium mb-0 text-justify">
+                                    Admin Email: admin@gmail.com <br>
+                                    Password: 6oGPS18;
+                                </p>
+
+                                <hr>
+                                <p class="medium mb-0 text-justify">
+                                    Manager Email: manager@gmail.com <br>
+                                    Password: mozZ97(K
+                                </p>
+
+                                <hr>
+                                <p class="medium mb-0 text-justify">
+                                    User Email: user@gmail.com <br>
+                                    Password: M16|OvmZ
+                                </p>
                             </div>
                         </div>
                     </div>

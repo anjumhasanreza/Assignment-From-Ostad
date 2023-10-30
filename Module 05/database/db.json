@@ -1,0 +1,44 @@
+{
+    "0": {
+        "id": 1,
+        "username": "A Hasan Reza",
+        "email": "admin@gmail.com",
+        "role": "admin",
+        "password": "$2y$10$AC3QJT4RLMLzG.Jw.X0KC.vA5ybZagMNqLXnIZqZtZiDUEktSICJS"
+    },
+    "1": {
+        "id": 2,
+        "username": "A Hasan Reza",
+        "email": "user@gmail.com",
+        "role": "user",
+        "password": "$2y$10$.\/gxMaObhm7fo7YtrBLChe00F2UkpT3eK\/k8HpcumT.rh22M\/g90u"
+    },
+    "2": {
+        "id": 3,
+        "username": "A Hasan Reza",
+        "email": "manager@gmail.com",
+        "role": "manager",
+        "password": "$2y$10$dC8f3N2mazAUUstM8oSiDu2fqjCrmRmZrgGMT1D1caObF6Y2aOKcm"
+    },
+    "4": {
+        "id": 5,
+        "username": "Anjum Hasan Reza",
+        "email": "aass@gmail.com",
+        "role": "user",
+        "password": "$2y$10$bKXW.KJdWbphPljSzU4Og.PaG93SZr8QbmOzKHnXGbHE.Nua.4.Fu"
+    },
+    "5": {
+        "id": 6,
+        "username": "Anjum Hasan Reza",
+        "email": "aaqq@gmail.com",
+        "role": "admin",
+        "password": "$2y$10$25JKbtTVcPA\/im4RkFiLIOesFIrXSk2wJYDyEvBITYy\/dL.Ardkzy"
+    },
+    "6": {
+        "id": 7,
+        "username": "Anjum Hasan Reza",
+        "email": "aassdd@gmail.com",
+        "role": "admin",
+        "password": "$2y$10$i0XMgbWzDXOB6gzc1xkYJeZs6m9rUOVu.awRgd2GLnm5oF1IrleM."
+    }
+}
