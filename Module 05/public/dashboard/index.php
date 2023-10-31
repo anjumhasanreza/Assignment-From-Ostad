@@ -24,8 +24,8 @@ usort($allRegistrations, function ($a, $b) {
         </div>
         <div class="row">
             <div class="col-lg-12 mt-2">
-                <div class="mb-3 d-flex justify-content-end">
-                    <a class="btn btn-warning" href="<?php echo BASE_URL; ?>/dashboard/user/create.php">Add New User</a>
+                <div class="mb-3 d-flex justify-content-start">
+                    <a class="btn_out warning btn_add text-center" href="<?php echo BASE_URL; ?>/dashboard/user/create.php">Add New User</a>
                 </div>
 
 
@@ -61,12 +61,12 @@ usort($allRegistrations, function ($a, $b) {
                                     <td class="text-white text-center"><?php echo $data['email'] ?? ""; ?></td>
                                     <td class="text-white text-center"><?php echo $data['role'] ?? ""; ?></td>
                                     <td class="text-center">
-                                        <a href="<?php echo BASE_URL; ?>/dashboard/user/view.php?id=<?php echo $data['id']; ?>" class="btn btn-success btn-sm">View</a>
+                                        <a href="<?php echo BASE_URL; ?>/dashboard/user/view.php?id=<?php echo $data['id']; ?>" class="btn_out success">View</a>
                                         <?php if (isAdmin()) : ?>
-                                            <a href="<?php echo BASE_URL; ?>/dashboard/user/edit.php?id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="<?php echo BASE_URL; ?>/dashboard/user/edit.php?id=<?php echo $data['id']; ?>" class="btn_out info">Edit</a>
                                         <?php endif; ?>
                                         <?php if (isAdmin()) : ?>
-                                            <a href="<?php echo BASE_URL; ?>/dashboard/user/delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="<?php echo BASE_URL; ?>/dashboard/user/delete.php?id=<?php echo $data['id']; ?>" class="btn_out danger">Delete</a>
                                         <?php endif; ?>
                                     </td>
                                 </tr>

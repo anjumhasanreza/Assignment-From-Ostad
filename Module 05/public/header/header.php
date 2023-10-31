@@ -80,7 +80,98 @@ define("DB_FILE_PATH",  $_SERVER['DOCUMENT_ROOT'] . "/database/db.json");
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background: linear-gradient(to right, #3a5f0b, #de6c07);
         }
-        
+
+        .btn_out {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+        /* Green */
+        .success {
+            border-color: #04AA6D;
+            color: green;
+        }
+
+        .success:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Blue */
+        .info {
+            border-color: #2196F3;
+            color: dodgerblue
+        }
+
+        .info:hover {
+            background: #2196F3;
+            color: white;
+        }
+
+        /* Orange */
+        .warning {
+            border-color: #ff9800;
+            color: orange;
+        }
+
+        .warning:hover {
+            background: #ff9800;
+            color: white;
+        }
+
+        /* Blue */
+        /* .danger {
+            border-color: blue;
+            color: Blue
+        }
+
+        .danger:hover {
+            background: #f44336;
+            color: white;
+        } */
+
+        /* Red */
+        .danger {
+            border-color: #f44336;
+            color: red
+        }
+
+        .danger:hover {
+            background: #f44336;
+            color: white;
+        }
+
+        /* Gray */
+        .default {
+            border-color: #3d3030;
+            color: black;
+        }
+
+        .default:hover {
+            background: #0b0b0b;
+            color: rgb(248, 244, 244);
+        }
+
+        .black {
+            border-color: #000000;
+            color: rgb(8, 8, 8)
+        }
+
+        .black:hover {
+            background: #000000;
+            color: white;
+        }
+
+
+
+        .btn_add {
+            width: 300px;
+        }
 
         .my-custom-element {
             background-color: #87CEFA;

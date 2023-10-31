@@ -67,15 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["register"])) {
 }
 ?>
 <!-- Section: Design Block -->
-<section class="text-center text-lg-start">
+<section class="text-center text-lg-start parallaxss">
     <!-- Jumbotron -->
     <div class="container py-4">
         <div class="row g-0 align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="card cascading-right" style="
-            background: hsla(0, 0%, 100%, 0.55);
-            backdrop-filter: blur(30px);
-            ">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px); ">
                     <div class="card-body p-5 shadow-5 text-center">
                         <h2 class="fw-bold mb-5">Add New User</h2>
                         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
@@ -115,12 +113,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["register"])) {
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" name="register" class="btn btn-primary btn-block mb-4">
+                            <!-- <button type="submit" name="register" class="btn btn-primary btn-block mb-4"> -->
+                            <button type="submit" name="register" class="btn my-custom-element btn-block mb-4">
                                 Register
                             </button>
 
                             <!-- Register buttons -->
-                            <div class="text-center">
+                            <!-- <div class="text-center">
                                 <p>or sign up with:</p>
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-facebook-f"></i>
@@ -137,14 +136,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["register"])) {
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-github"></i>
                                 </button>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                 </div>
             </div>
+            <div class="col-md-2"></div>
 
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4" alt="" />
+                <!-- <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4" alt="" /> -->
             </div>
         </div>
     </div>
