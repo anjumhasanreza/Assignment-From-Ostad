@@ -58,6 +58,21 @@ define("DB_FILE_PATH",  $_SERVER['DOCUMENT_ROOT'] . "/database/db.json");
             /* margin-left: 205px; */
         }
 
+        .parallaxsss {
+            background-image: url("./img/banner.jpg");
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            min-height: 454px;
+            max-width: 100%;
+            /* margin-top: 5px; */
+            /* margin-left: 205px; */
+        }
+
 
         /* .gradient-custom-2 { */
         /* fallback for old browsers */
@@ -223,7 +238,7 @@ define("DB_FILE_PATH",  $_SERVER['DOCUMENT_ROOT'] . "/database/db.json");
                                 <a class="nav-link" href="<?php echo BASE_URL; ?>/dashboard/index.php">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="<?php echo BASE_URL; ?>/home/index.php">Home</a>
                             </li>
                     <?php
                         endif;

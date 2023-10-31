@@ -17,10 +17,11 @@ if (isAdmin()) {
 // At this point, the user is not an admin and not authenticated
 
 ?>
-<section class="vh-100" style="background-color: #eee;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 mt-5">
+<!-- <section class="vh-100" style="background-color: #eee;"> -->
+<section class="vh-100 parallaxsss">
+    <div class="container parallaxsss">
+        <div class="row parallaxsss">
+            <div class="col-lg-12 mt-5 parallaxsss">
                 <?php
                 if (isset($_SESSION['username'])) {
                     echo "Welcome, " . htmlspecialchars($_SESSION['username']) . "! You are now logged in.";
