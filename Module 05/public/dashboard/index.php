@@ -17,7 +17,7 @@ usort($allRegistrations, function ($a, $b) {
 ?>
 
 <!-- <section class="vh-100" style="background-color: #eee;"> -->
-<section class="vh-100 text-white parallaxss">
+<section class=" text-white parallaxss">
     <div class="container">
         <div class="row">
             <h3 class="mt-5 text-center">Role Management</h3>

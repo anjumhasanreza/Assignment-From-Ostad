@@ -40,5 +40,12 @@
         "email": "aassdd@gmail.com",
         "role": "admin",
         "password": "$2y$10$i0XMgbWzDXOB6gzc1xkYJeZs6m9rUOVu.awRgd2GLnm5oF1IrleM."
+    },
+    "7": {
+        "id": 8,
+        "username": "Anjum Hasan Reza",
+        "email": "aassdd@gmail.com",
+        "role": "admin",
+        "password": "$2y$10$i0XMgbWzDXOB6gzc1xkYJeZs6m9rUOVu.awRgd2GLnm5oF1IrleM."
     }
 }
